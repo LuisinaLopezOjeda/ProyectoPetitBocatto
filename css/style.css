@@ -23,6 +23,10 @@
     "acercadenosotros_cont" 
     "footer-container";
 }
+.align-right{
+    display: flex;
+    justify-content: flex-end;
+}
 /* APLICO GRID AL CONTENEDOR DE CONTACTO */
 .contenedor_padre_contacto{
     display: grid;
@@ -91,6 +95,12 @@
 .header_logo img {
     margin-left: 5rem;
     width: 55%;
+
+box-shadow: inset -1px 3px 8px 5px var(--menu_color), 2px 5px 16px 0px #0B325E, 1px -18px 13px 5px var(--menu_color);
+ 
+}
+body#tinymce {
+background: #FFFFFF
     
 
 }
@@ -152,11 +162,7 @@
 .acercannos_enunciado{
     grid-area: "acercannos_enunciado";
 }
-#acercadenosotros {
-    padding: 3em;
-    margin: 3em;
 
-}
 h2 {
     font-size: 1.2rem;
     color: var(--sub_menu_color);
@@ -236,6 +242,10 @@ h2 {
     grid-area: "footer";
     grid-template-columns:  1fr;
     grid-template-rows: 1fr;
+    background: #FAFBFB;
+    background: -moz-radial-gradient(center, #FAFBFB 0%, #48F1FF 100%, #FAFBFB 100%);
+    background: -webkit-radial-gradient(center, #FAFBFB 0%, #48F1FF 100%, #FAFBFB 100%);
+    background: radial-gradient(ellipse at center, #FAFBFB 0%, #48F1FF 100%, #FAFBFB 100%);
 }
     
 
@@ -246,7 +256,7 @@ h2 {
     grid-template-areas: 
     "footerIzq" "logoFooter" "footerDer";
     grid-area: "footer-container";
-    background: url('../multimedia/imagenes/fondodegrade.png');
+   /* background: url('../multimedia/imagenes/fondodegrade.png');*/
 }
 #logo_petit_footer {
     /* logo de Petit Bocatto del Footer */
@@ -426,8 +436,8 @@ button {
   .titulo{
     display: block;
     font-family: sans-serif;
-    margin: 10px auto 5px;
-    width: 300px;
+    margin: auto;
+    width: auto;
   }
   .termsConditions{
     margin: 0 auto 5px 80px;
