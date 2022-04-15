@@ -261,6 +261,8 @@ h2 {
 #logo_petit_footer {
     /* logo de Petit Bocatto del Footer */
     width: 30%;
+    
+    background: white;
     display: flex;
     align-items: center;
 }
