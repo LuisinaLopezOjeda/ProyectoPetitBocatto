@@ -67,6 +67,7 @@
     position: sticky;
     top: 0;
     grid-area: "header";
+    z-index: 9999;
    
    /* vertical-align: middle;*/
 }
@@ -91,12 +92,17 @@
     display: flex; 
     justify-content: space-around;    
 }
+.header_logo{
+    display: flex;
+    align-content: flex-end;
+}
 
 .header_logo img {
-    margin-left: 5rem;
+    flex:1;
     width: 55%;
+    border-radius: 64px;
 
-box-shadow: inset -1px 3px 8px 5px var(--menu_color), 2px 5px 16px 0px #0B325E, 1px -18px 13px 5px var(--menu_color);
+ /*box-shadow: inset -1px 3px 8px 5px var(--menu_color), 2px 5px 16px 0px #0B325E, 1px -18px 13px 5px var(--menu_color);*/
  
 }
 body#tinymce {

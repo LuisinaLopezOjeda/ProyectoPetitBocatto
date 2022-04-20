@@ -15,8 +15,6 @@
 </head>
 
 <body>
-
-
     <div class="header">
 
         <div class="header_logo">
@@ -25,7 +23,7 @@
         <!-- NAV BAR -->
 
 
-        <nav class="navbar navbar-expand-lg navbar-light navbar-left header_menu" style="justify-content: flex-end">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-left header_menu" style="justify-content: flex-center">
             <div class="container-fluid" style="justify-content: flex-end">
 
                 <button class="navbar-toggler navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,15 +31,13 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav menu d-flex justify-content-right">
-                        <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
+
                         <li class="menu_item"><a id="inicio" href="../index.html">Inicio</a></li>
                         <li class="menu_item">
                             <!--Enlace interno /redirigir a la seccion Acerca de Nosotros en la pagina de inicio-->
-                            <a href="#acercadenosotros">Acerca de Nosotros</a>
+                            <a href="../index.html#acercadenosotros">Acerca de Nosotros</a>
                         </li>
                         <li class="menu_item"> <a href="galeria.html">Galeria de Trabajos</a></li>
                         <li class="menu_item"><a href="productos.html">Productos</a></li>
@@ -68,27 +64,38 @@
             </div>
             <!-- conecto el formulario con mi archivo php para darle fucnionalidad-->
             <!-- Formlario tomado de  https://freefrontend.com/css-contact-forms/-->
-            <form action="../form.php" method="post" class="form speaker-form">
+            <form action="../form.php" method="post" class="speaker-form">
 
-                <div class="secondaryTitle titulo">Por favor ingresa tus datos.</div>
+                <div class="secondaryTitle titulo mt-5 d-flex justify-content-center">Por favor ingresa tus datos.</div>
                 <input type="text" id="nombre" class="name formEntry" placeholder="Nombre" />
                 <input type="text" id="email" class="email formEntry" placeholder="Email" />
-                <input type="tel" id="tel" class="tel formEntry" placeholder="Telefono" />
+                <input type="tel" id="tel" class="tel formEntry" placeholder="Teléfono" />
 
                 <textarea class="message formEntry" placeholder="Mensaje"></textarea>
                 <!-- boton obtenido de https://cssbuttons.io/-->
                 <button class="submit formEntry" onclick="thanks()" type="submit">
+
+
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor"
-                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                </path>
-                            </svg>
+                            <div class="row">
+                                <div class="col col-md-4 align-middle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="col col-md-8 d-flex justify-content-left align-middle">
+                                    <span>Enviar</span>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
-                    <span>Enviar</span>
                 </button>
 
             </form>
@@ -104,54 +111,57 @@
                 <div class="container pt-4">
                     <!-- Section: Social media -->
                     <div class="row mb-4">
-                       
+
                         <div class="col">
                             <div class="row">
-                                 <!-- LOGO FACEBOOK -->
-                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/petit.bocatto.7" role="button"
+                                <!-- LOGO FACEBOOK -->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                                    href="https://www.facebook.com/petit.bocatto.7" role="button"
                                     data-mdb-ripple-color="dark"><img class="logo_contacto_footer"
                                         src="../multimedia/imagenes/facebook.png" alt=""></a>
-    
+
                                 </a>
                             </div>
                             <div class="row">
-                                 <!-- LOGO INSTAGRAM -->
-                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/petit.bocatto" role="button"
+                                <!-- LOGO INSTAGRAM -->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                                    href="https://www.instagram.com/petit.bocatto" role="button"
                                     data-mdb-ripple-color="dark"><img class="logo_contacto_footer"
                                         src="../multimedia/imagenes/instagram.png" alt=""></img></a>
-    
+
                             </div>
-    
+
                         </div>
                         <div class="col d-flex ">
                             <div class="row ">
                                 <!-- LOGO PETIT BOCATTO - FOOTER -->
-                                <a class="btn btn-link btn-floating btn-lg text-dark m-1 d-flex justify-content-center" href="../index.html" role="button"
-                                    data-mdb-ripple-color="dark"><img id="logo_petit_footer" src="../multimedia/imagenes/logo.png"
-                                        alt=""></a>
-    
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1 d-flex justify-content-center"
+                                    href="../index.html" role="button" data-mdb-ripple-color="dark"><img
+                                        id="logo_petit_footer" src="../multimedia/imagenes/logo.png" alt=""></a>
+
                             </div>
                         </div>
                         <div class="col">
                             <!-- LOGO MAPS -->
                             <div class="row">
-                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://goo.gl/maps/6eGbhzfFqPH5duuc7" role="button"
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                                    href="https://goo.gl/maps/6eGbhzfFqPH5duuc7" role="button"
                                     data-mdb-ripple-color="dark">Corneille 4071 <img class="logo_contacto_footer"
                                         src="../multimedia/imagenes/pin_mapa.png" alt=""></a>
-    
-                                        
+
+
                             </div>
                             <div class="row">
-                                 <!-- LOGO TELEFONO -->
+                                <!-- LOGO TELEFONO -->
                                 <a class="btn btn-link btn-floating btn-lg text-dark m-1 " href="#!" role="button"
                                     data-mdb-ripple-color="dark">091 999 999<img class="logo_contacto_footer"
                                         src="../multimedia/imagenes/telefono-movil.png" alt=""></a>
-    
+
                             </div>
                         </div>
-    
+
                     </div>
-                    
+
             </footer>
             <!-- Termina: Footer-->
 
