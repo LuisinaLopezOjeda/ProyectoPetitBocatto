@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+
+@import '../scss/base/header';
+@import '../scss/base/footer';
+@import '../scss/base/body';
+/*Reseteo los margenes y padding a cero*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}

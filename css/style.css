@@ -1,539 +1,262 @@
-/*Reseteo los margenes y padding a cero*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+.header {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header_logo" "header_menu";
+  align-items: center;
+  position: sticky;
+  top: 0;
+  grid-area: "header";
+  z-index: 9999;
+  background-color: white;
 }
-@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
-
-:root{
-    --menu_color:#41D9E6;
-    --sub_menu_color:#00b2bf;
-    --borde_menu: black solid 1px;
+.header .header_logo {
+  display: flex;
+  align-content: flex-end;
 }
-/* APLICO GRID AL CONTENEDOR DE INDEX */
-.contenedor_padre{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr, 1fr, 1fr, 0.02fr;
-    grid-template-areas: 
-    "header"
-    "contenedor_home"  
-    "acercadenosotros_cont" 
-    "footer-container";
+.header .header_logo img {
+  flex: 1;
+  width: 55%;
+  border-radius: 64px;
 }
-.align-right{
-    display: flex;
-    justify-content: flex-end;
+.header .header_menu {
+  display: flex;
+  background-color: #41D9E6;
+  align-items: center;
+  justify-content: space-around;
+  flex: 2;
+  margin: auto 5rem auto 0;
+  grid-area: "header_menu";
 }
-/* APLICO GRID AL CONTENEDOR DE CONTACTO */
-.contenedor_padre_contacto{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr, 3fr, 0.05fr;
-    grid-template-areas: 
-    "header"
-    "contenedor_contacto"  
-    "footer-container";
+.header .header_menu div .panelmenu .menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
-/* APLICO GRID AL CONTENEDOR DE GALERIA */
-.contenedor_padre_galeria{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr, 1fr, 0.05fr;
-    grid-template-areas: 
-    "header"
-    "contenedor_galeria"  
-    "footer-container";
+.header .header_menu div .panelmenu .menu .menu_item {
+  padding: 0em 1em;
+  margin: 1em;
+  background-color: #41D9E6;
+  font-size: 1.2em;
+  text-decoration: none;
 }
-/* APLICO GRID AL CONTENEDOR DE PRODUCTOS */
-.contenedor_padre_productos{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr, 1fr, 0.05fr;
-    grid-template-areas: 
-    "header"
-    "contenedor_productos"  
-    "footer-container";
+.header .header_menu div .panelmenu .menu .menu_item a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
 }
-.header{
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header_logo" "header_menu";
-    align-items: center;
-    position: sticky;
-    top: 0;
-    grid-area: "header";
-    z-index: 9999;
-   
-   /* vertical-align: middle;*/
-}
-
-
-/* MENU */
-.header_menu{
-    display: flex;
-    background-color: var(--menu_color);
-    align-items: center;
-    justify-content: space-around;   
-    flex:2;
-    margin: auto 5rem auto 0;
-    grid-area:"header_menu";
-    
-}
-
-.header_menu ul{
-    list-style: none;
-}
-.menu{
-    display: flex; 
-    justify-content: space-around;    
-}
-.header_logo{
-    display: flex;
-    align-content: flex-end;
-}
-
-.header_logo img {
-    flex:1;
-    width: 55%;
-    border-radius: 64px;
-
- /*box-shadow: inset -1px 3px 8px 5px var(--menu_color), 2px 5px 16px 0px #0B325E, 1px -18px 13px 5px var(--menu_color);*/
- 
-}
-body#tinymce {
-background: #FFFFFF
-    
-
-}
-.menu a{
-    text-decoration: none;
-    color: white;
-    text-align: center;
-}
-
-.menu a:hover {
-    font-weight: bold;
-     
-}
-.menu_item{ 
-    padding: 0em 1em;
-    margin: 1em;
-    background-color: var(--menu_color);
-    font-size: 1.2em;
-    text-decoration: none;
-}
-.contenedor_home{
-   display: flex;
-   justify-content: center;
-   grid-area: "contenedor_home";
-  
-}
-.contenedor_contacto{
-    grid-area: "contenedor_contacto";
-}
-.contenedor_productos{
-    grid-area: "contenedor_productos";
-}
-
-.pagina__titulo div{
-    display: flex;
-    justify-content: center;
-    font-family: 'Smokum',cursive;
-    font-style: normal;
-    text-decoration:underline ;
-    font-size: calc(1em + .7vw);
-    color: var(--sub_menu_color);
-}
-.pagina__titulo div img{
-    width: 60%;
-    margin: 10rem;
-    padding: 1rem 13rem;
-    display: flex;
-    justify-content: center;
-}
-
-
-/* CARRUSEL */
-.acercadenosotros_cont{
-    grid-area: "acercadenosotros_cont";
-}
-.acercanos_titulo{
-    grid-area: "acercanos_titulo";
-}
-.acercannos_enunciado{
-    grid-area: "acercannos_enunciado";
-}
-
-h2 {
-    font-size: 1.2rem;
-    color: var(--sub_menu_color);
-}
-#acercadenosotros p {
-    font-family: 'Smokum',cursive;
-    font-size: 1rem;
-}
-
-/* GALERIA */
-.contenedor_galeria {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   flex-wrap: wrap;
-   grid-area: "contenedor_galeria";
-
-    
-}
-.imagen_ppal{
-     display: flex;
-    justify-content: center;
-    margin: 3em;
-    overflow: hidden;
-}
-.imagen_ppal img{
-    width: 40%;
-   
-}
-.lista_imagenes_chicas{
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5rem 2rem;
-    
-}
-
-.imagenes_chicas img {
-     width: 150px;
-
-}
-
-/* PRODUCTOS */
-
-.lista_productos{
-    max-width: 80%;
-    min-width: 50%;
-    display: flex;
-    justify-content:flex-start;
-    margin: 0 6em;
-    padding: 3em;
-    flex-wrap: wrap;
-   
-}
-.producto{
-    margin: auto 2em;
-}
-.producto img {
-    display: flex;
-    width: 150px;
-    display: inline;
-    justify-content: center ;
-}
-.producto p{
-    width: 300px;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
-/* FOOTER */
-.footer{
-    display: grid;
-    grid-area: "footer";
-    grid-template-columns:  1fr;
-    grid-template-rows: 1fr;
-    background: #FAFBFB;
-    background: -moz-radial-gradient(center, #FAFBFB 0%, #48F1FF 100%, #FAFBFB 100%);
-    background: -webkit-radial-gradient(center, #FAFBFB 0%, #48F1FF 100%, #FAFBFB 100%);
-    background: radial-gradient(ellipse at center, #FAFBFB 0%, #48F1FF 100%, #FAFBFB 100%);
-}
-    
-
-.footer-container{
-    display: grid;
-    grid-template-columns:  1fr 0.5fr 1fr;
-    grid-template-rows: 0.1fr;
-    grid-template-areas: 
-    "footerIzq" "logoFooter" "footerDer";
-    grid-area: "footer-container";
-   /* background: url('../multimedia/imagenes/fondodegrade.png');*/
-}
-#logo_petit_footer {
-    /* logo de Petit Bocatto del Footer */
-    width: 30%;
-    display: flex;
-    align-items: center;
-}
-.logoFooter{
-    grid-area:"logoFooter" ;
-}
-.logoFooter a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header .header_menu div .panelmenu .menu .menu_item a:hover {
+  font-weight: bold;
 }
 
 .logo_contacto_footer {
-    width: 10%;
-    
+  width: 10%;
 }
 
-.logo_contacto_footer a{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+#logo_petit_footer {
+  /* logo de Petit Bocatto del Footer */
+  width: 30%;
+  display: flex;
+  align-items: center;
 }
 
-
-.footerIzq{
-    grid-area: "footerIzq";
-    display: flex;
-    justify-content: flex-start;
-    margin: 5rem;
-    padding: 1rem;
- 
-}
-.footerIzq ul li{
-    list-style: none;
-    padding: 1rem;
-   
-}
-.footerDer{
-    grid-area: "footerDer";
-    display: flex;
-    justify-content: flex-end;
-    margin: 5rem;
-    padding: rem;
- 
+/*@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');*/
+.pagina__titulo div {
+  display: flex;
+  justify-content: center;
+  font-family: "Sacramento", cursive;
+  /*'Smokum',cursive;*/
+  font-style: italic;
+  text-decoration: underline;
+  font-size: calc(1em + 0.7vw);
+  color: #00b2bf;
 }
 
-.footer__iconos__der a{
-    padding: 1rem;
-    display: flex;
-    justify-content: flex-end;
+h2 {
+  font-size: 1.2rem;
+  color: #00b2bf;
 }
-/*
-
-.footerDer ul{
-    list-style: none;
-    justify-content: flex-end;
-    align-items: center;
-   
-}
-.footerDer ul li{
-    margin: 1rem;
-    padding: 1rem;
-}
-.footer__iconos__der a{
-    display: flex;
-    justify-content: flex-end;
-}*/
-.logoFooter{
-    grid-area:"logoFooter" ;
-    background: white;
-    display: flex;
-    align-items: center;
+h2 #acercadenosotros p {
+  font-family: "Smokum", cursive;
+  font-size: 1rem;
 }
 
-
-.footerDer{
-    grid-area: "footerDer";
-  
-   
+/*  Estilos para el form de Contacto */
+body {
+  background-color: #d1f3e7;
 }
 
-.footer__iconos__der{
-    display: flex;
-    justify-content: flex-end;
+#title-Tag-Line {
+  font-size: 20px;
 }
 
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.titulo {
+  display: block;
+  font-family: sans-serif;
+  margin: auto;
+  width: auto;
+}
+
+.termsConditions {
+  margin: 0 auto 5px 80px;
+}
+
+.form-titulo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.secondaryTitle {
+  color: grey;
+}
+
+.name {
+  background-color: #ebebeb;
+  color: white;
+}
+
+.name:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.email {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.email:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.tel {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.tel:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 12em;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #00B2BF;
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0%;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+}
 /*  BOTÓN ENVIAR FORMULARIO  */
 /* From cssbuttons.io by @adamgiebl */
 button {
-    font-family:  'Smokum',cursive;
-    font-size: 20px;
-    background: royalblue;
-    color: white;
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
-    display: flex;
-    align-items: center;
-    border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.2s;
-   }
-   
-   button span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
-   }
-   
-   button svg {
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
-   }
-   
-   button:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
-   }
-   
-   button:hover svg {
-    transform: translateX(1.2em) rotate(45deg) scale(1.1);
-   }
-   
-   button:hover span {
-    transform: translateX(5em);
-   }
-   
-   button:active {
-    transform: scale(0.95);
-   }
-   
-   @keyframes fly-1 {
-    from {
-     transform: translateY(0.1em);
-    }
-   
-    to {
-     transform: translateY(-0.1em);
-    }
-   }
-   
-   /*  Estilos para el form de Contacto */
+  font-family: "Smokum", cursive;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
 
-   body {
-    background-color: #d1f3e7;
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
   }
-  
-  #title-Tag-Line {
-    font-size: 20px;
+  to {
+    transform: translateY(-0.1em);
   }
-  
-  .form {
-    background: #fff;
-    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
-    border-radius: 5px;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    left: 0;
-    right: 0;
-    position: absolute;
-    border-top: 5px solid #0e3721;
-  /*   z-index: 1; */
-    animation: bounce 1.5s infinite;
-  }
-  ::-webkit-input-placeholder {
-    font-size: 1.3em;
-  }
-  
-  .titulo{
-    display: block;
-    font-family: sans-serif;
-    margin: auto;
-    width: auto;
-  }
-  .termsConditions{
-    margin: 0 auto 5px 80px;
-  }
-  
-  .form-titulo{
-    font-size: 2em;
-    font-weight: bold;
-  }
-  .secondaryTitle{
-    color: grey;
-  }
-  
-  .name {
-    background-color: #ebebeb;
-    color: white;
-  }
-  .name:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 30px;
-    width: 380px;
-    transition: ease 0.5s;
-  }
-  
-  .email {
-    background-color: #ebebeb;
-    height: 2em;
-  }
-  
-  .email:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 30px;
-    width: 380px;
-    transition: ease 0.5s;
-  }
-  .tel{
-    background-color: #ebebeb;
-    height: 2em;
-  }
-  
-  .tel:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 30px;
-    width: 380px;
-    transition: ease 0.5s;
-  }
-  .message {
-    background-color: #ebebeb;
-    overflow: hidden;
-    height: 10rem;
-  }
-  
-  .message:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 12em;
-    width: 380px;
-    transition: ease 0.5s;
-  }
-  
-  .formEntry {
-    display: block;
-    margin: 30px auto;
-    min-width: 300px;
-    padding: 10px;
-    border-radius: 2px;
-    border: none;
-    transition: all 0.5s ease 0s;
-  }
-  
-  .submit {
-    width: 200px;
-    color: white;
-    background-color: #00B2BF;
-    font-size: 20px;
-  }
-  
-  .submit:hover {
-    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
-    transform: translateY(-3px);
-    width: 300px;
-    border-top: 5px solid #0e3750;
-    border-radius: 0%;
-  }
-  
-  @keyframes bounce {
-    0% {
-      tranform: translate(0, 4px);
-    }
-    50% {
-      transform: translate(0, 8px);
-    }
-  } 
-  
-  
+}
+/*Reseteo los margenes y padding a cero*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */
