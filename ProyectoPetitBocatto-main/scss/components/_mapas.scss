@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import './variables';
+
+$marca_producto: (
+    color-menu:$menu_color,
+    color-titulo:$sub_menu_color,
+    color-boton:darken($menu_color,15%),
+    color-menu-hover:lighten($menu_color,25%)
+)

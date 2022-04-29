@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
 
 @import '../scss/base/header';
 @import '../scss/base/footer';
@@ -9,4 +8,7 @@
     padding: 0;
     box-sizing: border-box;
 
+}
+.disclaimer{
+    display: none !important;
 }

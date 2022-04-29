@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+@import '../components/variables';
+
+%formulario_hover{
+    border-bottom: 5px solid #0e3721;
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+}
+%tipografia{
+    font-family: 'Sacramento',cursive;
+    font-display: swap;
+}
+%tipografia_subTitulo{
+    font-family: "Smokum", cursive;
+    font-display: swap;
+}

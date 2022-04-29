@@ -1,24 +1,25 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-@import '../components/variables';
+
+@import '../components/extends';
+@import '../components/mapas';
+@import '../components/mixin';
 
   .pagina__titulo {
     div{
-        display: flex;
-        justify-content: center;
-        font-family: 'Sacramento',cursive;/*'Smokum',cursive;*/
-        font-style: italic;
+      
+      @include posicion(flex,null,center);
         text-decoration:underline ;
         font-size: calc(1em + .7vw);
-        color: $sub_menu_color;
+        font-style: italic;
+        color: map-get($marca_producto , color-titulo ) ;
+        @extend %tipografia;
     }
   }
   h2{
     font-size: 1.2rem;
-    color: $sub_menu_color;
+    color: map-get($marca_producto , color-titulo ) ;
     #acercadenosotros{
         p{
-            font-family: 'Smokum',cursive;
+            @extend %tipografia_subTitulo;
             font-size: 1rem;
         }
     }
@@ -62,10 +63,7 @@
     color: white;
   }
   .name:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 30px;
-    width: 380px;
-    transition: ease 0.5s;
+    @extend %formulario_hover;
   }
   
   .email {
@@ -74,10 +72,7 @@
   }
   
   .email:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 30px;
-    width: 380px;
-    transition: ease 0.5s;
+    @extend %formulario_hover;
   }
   .tel{
     background-color: #ebebeb;
@@ -85,10 +80,7 @@
   }
   
   .tel:hover {
-    border-bottom: 5px solid #0e3721;
-    height: 30px;
-    width: 380px;
-    transition: ease 0.5s;
+    @extend %formulario_hover;
   }
   .message {
     background-color: #ebebeb;
@@ -97,10 +89,9 @@
   }
   
   .message:hover {
-    border-bottom: 5px solid #0e3721;
+    
+    @extend %formulario_hover;
     height: 12em;
-    width: 380px;
-    transition: ease 0.5s;
   }
   
   .formEntry {
@@ -116,7 +107,7 @@
   .submit {
     width: 200px;
     color: white;
-    background-color: #00B2BF;
+    background-color: map-get($marca_producto, color-boton );
     font-size: 20px;
   }
   
@@ -140,14 +131,13 @@
   /*  BOTÓN ENVIAR FORMULARIO  */
 /* From cssbuttons.io by @adamgiebl */
 button {
-    font-family:  'Smokum',cursive;
+    @extend %tipografia_subTitulo;
     font-size: 20px;
-    background: royalblue;
+    background: map-get($marca_producto,color-boton);
     color: white;
     padding: 0.7em 1em;
     padding-left: 0.9em;
-    display: flex;
-    align-items: center;
+    @include posicion(flex,center,null);
     border: none;
     border-radius: 16px;
     overflow: hidden;

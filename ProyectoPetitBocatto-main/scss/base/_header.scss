@@ -1,21 +1,22 @@
 
-@import '../components/variables';
+@import '../components/mapas';
+@import '../components/mixin';
+
 
 .header{
-    display: grid;
+    @include posicion(grid,center,null);
     grid-template-columns: 0.2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "header_logo" "header_menu";
-    align-items: center;
     position: sticky;
     top: 0;
     grid-area: "header";
     z-index: 9999;
     background-color: white;
      .header_logo{
-        display: flex;
-        align-content: flex-end;
+         @include posicion(flex,flex-end,null);
+        
         img{
             flex:1;
             width: 55%;
@@ -24,10 +25,9 @@
         
     }
      .header_menu{
-        display: flex;
-        background-color: $menu_color;
-        align-items: center;
-        justify-content: space-around;   
+        
+        background-color: map-get($marca_producto, color-menu);
+        @include posicion(flex,center,space-around);
         flex:2;
         margin: auto 5rem auto 0;
         grid-area:"header_menu";
@@ -38,13 +38,12 @@
               
                 .menu{
                     list-style: none;
-                    display: flex; 
-                    justify-content: space-around; 
+                    @include posicion(flex,null,space-around);
                    
                     .menu_item{
                         padding: 0em 1em;
                         margin: 1em;
-                        background-color: $menu_color;
+                        background-color: map-get($marca_producto,color-menu);
                         font-size: 1.2em;
                         text-decoration: none;
                         a{
@@ -64,4 +63,10 @@
         
        
     }
+}
+.active_menu{
+    padding: 2rem;
+    font-weight: bold;
+ 
+    background-color: map-get($marca_producto , color-boton);
 }

@@ -1,0 +1,14 @@
+@import '../components/mixin';
+.logo_contacto_footer {
+    width: 10%;
+    
+}
+#logo_petit_footer {
+    /* logo de Petit Bocatto del Footer */
+    /*width: 30%;*/
+    @include posicion(flex,center,null);
+    flex:0.37;
+    width: 30%;
+    border-radius: 34px;
+}
+

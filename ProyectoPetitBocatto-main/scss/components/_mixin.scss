@@ -1,0 +1,6 @@
+@mixin posicion($display:flex, $align-items:stretch,$justify-content:flex-start){
+    display: $display;
+    align-items:$align-items;
+    justify-content:$justify-content;
+
+}

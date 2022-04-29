@@ -1,12 +1,14 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 .header {
   display: grid;
+  align-items: center;
   grid-template-columns: 0.2fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "header_logo" "header_menu";
-  align-items: center;
   position: sticky;
   top: 0;
   grid-area: "header";
@@ -15,7 +17,7 @@
 }
 .header .header_logo {
   display: flex;
-  align-content: flex-end;
+  align-items: flex-end;
 }
 .header .header_logo img {
   flex: 1;
@@ -23,8 +25,8 @@
   border-radius: 64px;
 }
 .header .header_menu {
-  display: flex;
   background-color: #41D9E6;
+  display: flex;
   align-items: center;
   justify-content: space-around;
   flex: 2;
@@ -52,26 +54,49 @@
   font-weight: bold;
 }
 
+.active_menu {
+  padding: 2rem;
+  font-weight: bold;
+  background-color: #19b4c1;
+}
+
 .logo_contacto_footer {
   width: 10%;
 }
 
 #logo_petit_footer {
   /* logo de Petit Bocatto del Footer */
-  width: 30%;
+  /*width: 30%;*/
   display: flex;
   align-items: center;
+  flex: 0.37;
+  width: 30%;
+  border-radius: 34px;
 }
 
-/*@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');*/
+.message:hover, .tel:hover, .email:hover, .name:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.pagina__titulo div {
+  font-family: "Sacramento", cursive;
+  font-display: swap;
+}
+
+button, h2 #acercadenosotros p {
+  font-family: "Smokum", cursive;
+  font-display: swap;
+}
+
 .pagina__titulo div {
   display: flex;
   justify-content: center;
-  font-family: "Sacramento", cursive;
-  /*'Smokum',cursive;*/
-  font-style: italic;
   text-decoration: underline;
   font-size: calc(1em + 0.7vw);
+  font-style: italic;
   color: #00b2bf;
 }
 
@@ -80,7 +105,6 @@ h2 {
   color: #00b2bf;
 }
 h2 #acercadenosotros p {
-  font-family: "Smokum", cursive;
   font-size: 1rem;
 }
 
@@ -122,35 +146,14 @@ body {
   color: white;
 }
 
-.name:hover {
-  border-bottom: 5px solid #0e3721;
-  height: 30px;
-  width: 380px;
-  transition: ease 0.5s;
-}
-
 .email {
   background-color: #ebebeb;
   height: 2em;
 }
 
-.email:hover {
-  border-bottom: 5px solid #0e3721;
-  height: 30px;
-  width: 380px;
-  transition: ease 0.5s;
-}
-
 .tel {
   background-color: #ebebeb;
   height: 2em;
-}
-
-.tel:hover {
-  border-bottom: 5px solid #0e3721;
-  height: 30px;
-  width: 380px;
-  transition: ease 0.5s;
 }
 
 .message {
@@ -160,10 +163,7 @@ body {
 }
 
 .message:hover {
-  border-bottom: 5px solid #0e3721;
   height: 12em;
-  width: 380px;
-  transition: ease 0.5s;
 }
 
 .formEntry {
@@ -179,7 +179,7 @@ body {
 .submit {
   width: 200px;
   color: white;
-  background-color: #00B2BF;
+  background-color: #19b4c1;
   font-size: 20px;
 }
 
@@ -202,9 +202,8 @@ body {
 /*  BOTÓN ENVIAR FORMULARIO  */
 /* From cssbuttons.io by @adamgiebl */
 button {
-  font-family: "Smokum", cursive;
   font-size: 20px;
-  background: royalblue;
+  background: #19b4c1;
   color: white;
   padding: 0.7em 1em;
   padding-left: 0.9em;
@@ -257,6 +256,10 @@ button:active {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.disclaimer {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
