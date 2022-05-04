@@ -1,0 +1,34 @@
+@import '../components/mapas';
+@mixin xs{
+    @media(max-width:map-get($breakpoints,"xs_hasta")){
+        @content;
+    }
+}
+@mixin sm{
+    @media(min-width: map-get($breakpoints,"sm_desde")) and (max-width:map-get($breakpoints,"sm_hasta")){
+        @content;
+    }
+}
+@mixin md{
+    @media(min-width: map-get($breakpoints,"md_desde")) and (max-width:map-get($breakpoints,"md_hasta")){
+        @content;
+    }
+}
+@mixin lg{
+    @media(min-width: map-get($breakpoints,"lg_desde")) and (max-width:map-get($breakpoints,"lg_hasta")){
+        @content;
+    }
+}
+@mixin xl{
+    @media(min-width: map-get($breakpoints,"xl_desde")) and (max-width:map-get($breakpoints,"xl_hasta")){
+        @content;
+    }
+}
+@mixin xxl{
+    @media(min-width: map-get($breakpoints,"xxl_desde")) {
+        @content;
+    }
+}
+
+   
+

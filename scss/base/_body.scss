@@ -2,6 +2,7 @@
 @import '../components/extends';
 @import '../components/mapas';
 @import '../components/mixin';
+@import '../components/mediaQuery';
 
   .pagina__titulo {
     div{
@@ -24,6 +25,39 @@
         }
     }
   }
+
+  /* carousel Inicio*/
+  .carouselExampleControls{
+  
+    @include lg{
+        width: 50%;
+    }
+    @include xl{
+      width: 50%;
+    } 
+    @include xxl{
+      width: 50%;
+    }
+  }
+  /*  Estilos para la galeria */
+  #galeria .row .col-lg-4{
+    padding: 20px;
+   
+   
+   
+      img{
+        width: 100%;
+        height: 350px;
+        
+        &:hover{
+          border: 5px solid #f7f7f7;
+        }
+      }
+   
+  }
+ 
+
+
 
   /*  Estilos para el form de Contacto */
 

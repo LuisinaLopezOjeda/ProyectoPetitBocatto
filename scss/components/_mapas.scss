@@ -6,4 +6,20 @@ $marca_producto: (
     color-titulo:$sub_menu_color,
     color-boton:darken($menu_color,15%),
     color-menu-hover:lighten($menu_color,25%)
-)
+);
+$breakpoints: (
+    "xs_desde": 0,
+    "xs_hasta": 575px,
+    "sm_desde":576px,
+    "sm_hasta":767px,
+    "md_desde":768px,
+    "md_hasta":991px,
+    "lg_desde":992px,
+    "lg_hasta":1199px,
+    "xl_desde":1200px,
+    "xl_hasta":1399px,
+    "xxl_desde":1400px,
+);
+
+
+

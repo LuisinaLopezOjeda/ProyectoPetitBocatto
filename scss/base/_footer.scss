@@ -1,6 +1,8 @@
 @import '../components/mixin';
+@import '../components/mediaQuery';
+
 .logo_contacto_footer {
-    width: 10%;
+    width: 30%;
     
 }
 #logo_petit_footer {
@@ -10,5 +12,23 @@
     flex:0.37;
     width: 30%;
     border-radius: 34px;
+}
+
+#footer_contenido{
+  
+    @include xs{
+        
+        display: flex;
+    }
+    @include sm{
+        display: flex;
+    }
+    @include md{
+        display:flex;
+    }
+   
+
+   
+
 }
 

@@ -1,17 +1,17 @@
 
 @import '../components/mapas';
 @import '../components/mixin';
+@import '../components/mediaQuery';
 
 
 .header{
-    @include posicion(grid,center,null);
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header_logo" "header_menu";
+    
+    @include posicion(flex,center,null);
+    
+    margin-bottom: 2rem;
     position: sticky;
     top: 0;
-    grid-area: "header";
+   display: flex;
     z-index: 9999;
     background-color: white;
      .header_logo{
@@ -28,9 +28,9 @@
         
         background-color: map-get($marca_producto, color-menu);
         @include posicion(flex,center,space-around);
-        flex:2;
-        margin: auto 5rem auto 0;
-        grid-area:"header_menu";
+        flex:5;
+        margin: auto 0 auto 0;
+        display: flex;
         
         div {
             
@@ -54,7 +54,9 @@
                                 font-weight: bold;  
                             }
                         }
+                        
                     }
+                    
                     
                 }
             }
@@ -69,4 +71,40 @@
     font-weight: bold;
  
     background-color: map-get($marca_producto , color-boton);
+}
+.header_menu{
+    @include xs{
+        width: 100%;
+    }
+    @include sm{
+        width: 100%;
+    }
+   
+}
+
+#logo_menu2{
+  
+    @include xs{
+        display:none;
+    }
+    @include sm{
+        display:none;
+    }
+    @include md{
+        display:none;
+    }
+    @include lg{
+        display:none;
+        flex:1;
+    }
+    @include xl{
+        display:flex;
+        flex:1;
+    } @include xxl{
+        display:flex;
+        flex:1;
+    }
+
+   
+
 }
