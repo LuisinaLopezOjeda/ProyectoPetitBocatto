@@ -11,7 +11,7 @@
     margin-bottom: 2rem;
     position: sticky;
     top: 0;
-   display: flex;
+    display: flex;
     z-index: 9999;
     background-color: white;
      .header_logo{
@@ -30,7 +30,7 @@
         @include posicion(flex,center,space-around);
         flex:5;
         margin: auto 0 auto 0;
-        display: flex;
+        
         
         div {
             
@@ -41,7 +41,7 @@
                     @include posicion(flex,null,space-around);
                    
                     .menu_item{
-                        padding: 0em 1em;
+                        padding: 0 1em;
                         margin: 1em;
                         background-color: map-get($marca_producto,color-menu);
                         font-size: 1.2em;
